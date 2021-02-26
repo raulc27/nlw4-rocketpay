@@ -7,12 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :rocketpay, Rocketpay.Repo,
-migration_parimary_key: [type: :binary_id],
-migration_foreign_key: [type: :binary_id]
+
 
 config :rocketpay,
   ecto_repos: [Rocketpay.Repo]
+
+  config :rocketpay, Rocketpay.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 
 # Configures the endpoint
 config :rocketpay, RocketpayWeb.Endpoint,
